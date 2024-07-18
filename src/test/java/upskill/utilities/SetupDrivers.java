@@ -26,6 +26,8 @@ public class SetupDrivers {
 //		options.addArguments("--headless");					//headless execution
 		driver = new ChromeDriver(options);					//initializing chrome driver
 		driver.get("https://www.ebay.com/");				//loading the page
+		
+		SetupDrivers.driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); // Implicit wait ( Global level)
 	}
 	
 	public static WebDriver getDriver(){
